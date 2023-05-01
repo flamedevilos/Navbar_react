@@ -1,38 +1,62 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primColor: #000000;
+  --secColor: #ffffff;
+  --thdColor: #00008e;
+  --frthColor: #a4a4a4;
+  --fifthColor: #ff0000;
+  --sthColor: #adff2f;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  background-color: var(--frthColor);
+  color: var(--secColor);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 2rem;
+  gap: 2rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0.25rem;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+nav li.active {
+  background-color: grey;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav li:hover {
+  background-color: var(--secColor);
+  color: #000000;
 }
+
